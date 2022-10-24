@@ -16,13 +16,13 @@ class CacheData {
         UserDefaults.standard.set(response, forKey: key)
     }
     
-    func timeDate(_ date: Date, key: String) {
-        UserDefaults.standard.set(date, forKey: key)
-    }
-    
     func getData(key: String) -> Data! {
         guard let data = UserDefaults.standard.data(forKey: key) else { return nil }
         return data
+    }
+    
+    func timeDate(_ date: Date, key: String) {
+        UserDefaults.standard.set(date, forKey: key)
     }
     
     func killTimerData(key: String) -> Bool {

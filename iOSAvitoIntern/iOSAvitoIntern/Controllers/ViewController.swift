@@ -35,7 +35,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
         }
     }
-
+    
     //MARK: create TableView
     private var tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .insetGrouped)
@@ -69,5 +69,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100.0
     }
+    
+    //MARK: header for uitable
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50.0
+        }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+            let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 50))
+            
+            let label = UILabel()
+            label.frame = CGRect.init(x: 10, y: 5, width: headerView.frame.width-10, height: headerView.frame.height-10)
+            label.text = result?.company.name
+            label.font = .systemFont(ofSize: 25)
+            label.textColor = .systemBlue
+            
+            headerView.addSubview(label)
+            
+            return headerView
+        }
 }
 
