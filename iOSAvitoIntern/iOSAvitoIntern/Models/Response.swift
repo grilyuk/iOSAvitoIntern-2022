@@ -18,17 +18,21 @@ final class Response {
             guard let urlCorrect = URL(string: url) else { return }
             URLSession.shared.dataTask(with: urlCorrect) { data, response, error in
                 DispatchQueue.main.async {
+                    
                     if let error = error {
                         completion(.failure(error))
                         return
                     }
+                    
                     if let response = response as? HTTPURLResponse {
                         if response.statusCode == 200 {
                         } else {
                             completion(.failure(response as! Error))
                         }
                     }
+                    
                     guard let data = data else { return }
+                    
                     do {
                         var decodeData = try JSONDecoder().decode(ParseModel.self, from: data)
                         decodeData.company.employees.sort {$0.name.lowercased() < $1.name.lowercased()}
@@ -41,6 +45,7 @@ final class Response {
                 }
             }.resume()
         } else {
+            
             //MARK: reading from userdefaults
             do {
                 guard let data = cache.getData(key: "DataSaved") else { return }
