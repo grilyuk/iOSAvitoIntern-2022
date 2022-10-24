@@ -43,9 +43,33 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return table
     }()
     
+    //MARK: header for tableview
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50.0
+        }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 50))
+        
+        let label = UILabel()
+        label.frame = CGRect.init(x: 10, y: 5, width: headerView.frame.width-10, height: headerView.frame.height-10)
+        label.text = result?.company.name
+        label.font = .systemFont(ofSize: 25)
+        label.textColor = .systemBlue
+            
+        headerView.addSubview(label)
+            
+        return headerView
+        }
+    
     //MARK: quantity rows in section
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return result?.company.employees.count ?? 0
+    }
+    
+    //MARK: height for cell
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100.0
     }
     
     //MARK: custom cell
@@ -64,29 +88,5 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }()
         return cell
     }
-    
-    //MARK: height for cell
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100.0
-    }
-    
-    //MARK: header for uitable
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50.0
-        }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-            let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 50))
-            
-            let label = UILabel()
-            label.frame = CGRect.init(x: 10, y: 5, width: headerView.frame.width-10, height: headerView.frame.height-10)
-            label.text = result?.company.name
-            label.font = .systemFont(ofSize: 25)
-            label.textColor = .systemBlue
-            
-            headerView.addSubview(label)
-            
-            return headerView
-        }
 }
 
