@@ -60,7 +60,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             for skill in arraySkills {
                 text.append("\(skill), ")
             }
-            return text
+            return String(text.dropLast(2))
         }()
         return cell
     }

@@ -45,8 +45,8 @@
                         <rect key="frame" x="95.666666666666686" y="15" width="80.333333333333314" height="70"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppq-Ma-Bso">
-                                <rect key="frame" x="0.0" y="0.0" width="75" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <rect key="frame" x="0.0" y="0.0" width="77" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -67,9 +67,7 @@
                 </subviews>
                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                 <constraints>
-                    <constraint firstItem="90a-4l-WQh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="5dG-V8-yKf"/>
-                    <constraint firstAttribute="bottom" secondItem="rlZ-2s-nr8" secondAttribute="bottom" constant="15" id="KQz-Ni-oH9"/>
-                    <constraint firstItem="rlZ-2s-nr8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="PVO-nz-M1G"/>
+                    <constraint firstItem="rlZ-2s-nr8" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="XFz-Du-tMN"/>
                     <constraint firstItem="QhW-pf-IGt" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="asN-BC-aPZ"/>
                     <constraint firstItem="QhW-pf-IGt" firstAttribute="leading" secondItem="rlZ-2s-nr8" secondAttribute="trailing" constant="8.0000000000000142" id="vjz-eY-5wd"/>
                     <constraint firstItem="rlZ-2s-nr8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="19" id="wz9-8C-ugY"/>
