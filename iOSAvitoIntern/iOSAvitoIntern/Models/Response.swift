@@ -12,7 +12,6 @@ final class Response {
     let cache = CacheData()
     
     func request(url: String, completion: @escaping (Result<ParseModel, Error>) -> Void) {
-        
         //MARK: check cache timer
         if cache.killTimerData(key: "TimeSaved") {
             //MARK: let's URLSession
@@ -22,6 +21,12 @@ final class Response {
                     if let error = error {
                         completion(.failure(error))
                         return
+                    }
+                    if let response = response as? HTTPURLResponse {
+                        if response.statusCode == 200 {
+                        } else {
+                            completion(.failure(response as! Error))
+                        }
                     }
                     guard let data = data else { return }
                     do {
