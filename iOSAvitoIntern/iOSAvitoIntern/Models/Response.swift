@@ -17,7 +17,7 @@ final class Response {
         if cache.killTimerData(key: "TimeSaved") {
             //MARK: let's URLSession
             guard let urlCorrect = URL(string: url) else { return }
-            URLSession.shared.dataTask(with: urlCorrect) { data, Response, error in
+            URLSession.shared.dataTask(with: urlCorrect) { data, response, error in
                 DispatchQueue.main.async {
                     if let error = error {
                         completion(.failure(error))
@@ -27,7 +27,7 @@ final class Response {
                     do {
                         var decodeData = try JSONDecoder().decode(ParseModel.self, from: data)
                         decodeData.company.employees.sort {$0.name.lowercased() < $1.name.lowercased()}
-                        self.cache.saveData(decodeData, key: "DataSaved")
+                        self.cache.saveData(data, key: "DataSaved")
                         self.cache.timeDate(Date(), key: "TimeSaved")
                         completion(.success(decodeData))
                     } catch let errorJSON {
@@ -40,6 +40,7 @@ final class Response {
             do {
                 guard let data = cache.getData(key: "DataSaved") else { return }
                 var decodeData = try JSONDecoder().decode(ParseModel.self, from: data)
+                cache.saveData(data, key: "DataSaved")
                 decodeData.company.employees.sort {$0.name.lowercased() < $1.name.lowercased()}
                 completion(.success(decodeData))
             } catch let smthWrong {

@@ -22,4 +22,10 @@ struct Employee: Codable {
     var name: String
     var phoneNumber: String
     var skills: [String]
+    
+    enum CodingKeys: String, CodingKey, CaseIterable {
+        case name
+        case phoneNumber = "phone_number"
+        case skills
+    }
 }
