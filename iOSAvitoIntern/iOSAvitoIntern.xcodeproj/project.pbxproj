@@ -16,6 +16,8 @@
 		5EB293302905E23600C4840D /* ParseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB2932F2905E23600C4840D /* ParseModel.swift */; };
 		5EB293332905E2EB00C4840D /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB293312905E2EB00C4840D /* MainTableViewCell.swift */; };
 		5EB293342905E2EB00C4840D /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EB293322905E2EB00C4840D /* MainTableViewCell.xib */; };
+		5EC795062906A7A100F2DC14 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC795052906A7A000F2DC14 /* Response.swift */; };
+		5EC795082906A86900F2DC14 /* CacheData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC795072906A86900F2DC14 /* CacheData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		5EB2932F2905E23600C4840D /* ParseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseModel.swift; sourceTree = "<group>"; };
 		5EB293312905E2EB00C4840D /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		5EB293322905E2EB00C4840D /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		5EC795052906A7A000F2DC14 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		5EC795072906A86900F2DC14 /* CacheData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,9 +69,9 @@
 				5EB2932C2905CA5800C4840D /* Models */,
 				5EB293382905F00500C4840D /* Views */,
 				5EB293372905EFF300C4840D /* Controllers */,
-				5EB293242905C7A100C4840D /* Info.plist */,
 				5EB2932A2905C98B00C4840D /* Application */,
 				5EB2932B2905C9AE00C4840D /* Resources */,
+				5EB293242905C7A100C4840D /* Info.plist */,
 			);
 			path = iOSAvitoIntern;
 			sourceTree = "<group>";
@@ -94,6 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				5EB2932F2905E23600C4840D /* ParseModel.swift */,
+				5EC795052906A7A000F2DC14 /* Response.swift */,
+				5EC795072906A86900F2DC14 /* CacheData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,6 +198,8 @@
 				5EB293172905C7A000C4840D /* AppDelegate.swift in Sources */,
 				5EB293192905C7A000C4840D /* SceneDelegate.swift in Sources */,
 				5EB293302905E23600C4840D /* ParseModel.swift in Sources */,
+				5EC795062906A7A100F2DC14 /* Response.swift in Sources */,
+				5EC795082906A86900F2DC14 /* CacheData.swift in Sources */,
 				5EB293332905E2EB00C4840D /* MainTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,7 +347,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 44J3T4A266;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSAvitoIntern/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -370,7 +378,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 44J3T4A266;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSAvitoIntern/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

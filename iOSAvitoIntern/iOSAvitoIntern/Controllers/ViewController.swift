@@ -42,7 +42,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.skillsLabel.text = ""
         return cell
     }
-
     
     //MARK: height for cell
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
