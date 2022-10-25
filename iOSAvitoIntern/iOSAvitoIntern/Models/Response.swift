@@ -9,11 +9,19 @@ import Foundation
 
 final class Response {
     
+    enum Errors: Error {
+        case responseError
+        case jsonError
+        case unknownError
+    }
+    
     let cache = CacheData()
     
     func request(url: String, completion: @escaping (Result<ParseModel, Error>) -> Void) {
+        
         //MARK: check cache timer
         if cache.killTimerData(key: "TimeSaved") {
+            
             //MARK: let's URLSession
             guard let urlCorrect = URL(string: url) else { return }
             URLSession.shared.dataTask(with: urlCorrect) { data, response, error in
@@ -27,7 +35,7 @@ final class Response {
                     if let response = response as? HTTPURLResponse {
                         if response.statusCode == 200 {
                         } else {
-                            completion(.failure(response as! Error))
+                            completion(.failure(Errors.responseError))
                         }
                     }
                     
@@ -39,11 +47,13 @@ final class Response {
                         self.cache.saveData(data, key: "DataSaved")
                         self.cache.timeDate(Date(), key: "TimeSaved")
                         completion(.success(decodeData))
-                    } catch let errorJSON {
-                        completion(.failure(errorJSON))
+                    } catch {
+                        completion(.failure(Errors.jsonError))
                     }
                 }
+                
             }.resume()
+            
         } else {
             
             //MARK: reading from userdefaults

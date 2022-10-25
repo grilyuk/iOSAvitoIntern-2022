@@ -8,7 +8,7 @@
 import Foundation
 
 //MARK: save data as UserDefaults
-class CacheData {
+final class CacheData {
     
     let time = 3600
     

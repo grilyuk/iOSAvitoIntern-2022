@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E665D3E290861C0001D0918 /* VCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E665D3D290861C0001D0918 /* VCExtension.swift */; };
 		5EB293172905C7A000C4840D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB293162905C7A000C4840D /* AppDelegate.swift */; };
 		5EB293192905C7A000C4840D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB293182905C7A000C4840D /* SceneDelegate.swift */; };
 		5EB2931B2905C7A000C4840D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB2931A2905C7A000C4840D /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E665D3D290861C0001D0918 /* VCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCExtension.swift; sourceTree = "<group>"; };
 		5EB293132905C7A000C4840D /* iOSAvitoIntern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSAvitoIntern.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB293162905C7A000C4840D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EB293182905C7A000C4840D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E665D3C290861AD001D0918 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5E665D3D290861C0001D0918 /* VCExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		5EB2930A2905C7A000C4840D = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +74,7 @@
 		5EB293152905C7A000C4840D /* iOSAvitoIntern */ = {
 			isa = PBXGroup;
 			children = (
+				5E665D3C290861AD001D0918 /* Extensions */,
 				5EB2932C2905CA5800C4840D /* Models */,
 				5EB293382905F00500C4840D /* Views */,
 				5EB293372905EFF300C4840D /* Controllers */,
@@ -193,6 +204,7 @@
 				5EB2931B2905C7A000C4840D /* ViewController.swift in Sources */,
 				5EB293172905C7A000C4840D /* AppDelegate.swift in Sources */,
 				5EB293192905C7A000C4840D /* SceneDelegate.swift in Sources */,
+				5E665D3E290861C0001D0918 /* VCExtension.swift in Sources */,
 				5EB293302905E23600C4840D /* ParseModel.swift in Sources */,
 				5EC795062906A7A100F2DC14 /* Response.swift in Sources */,
 				5EC795082906A86900F2DC14 /* CacheData.swift in Sources */,

@@ -7,7 +7,6 @@
 
 import Foundation
 
-//MARK: model for parse JSON
 struct ParseModel: Codable {
     var company: Company
 }
